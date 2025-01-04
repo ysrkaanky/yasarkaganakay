@@ -30,20 +30,23 @@ export function SiteHeader() {
             {routes.map((route) => {
               const isActive = pathname === route.href
               return (
-                <div
-                  className={cn("rounded-sm px-2 text-base duration-75", {
-                    "bg-primary": isActive,
-                    "bg-background": !isActive,
-                  })}
-                  key={route.href}
-                >
+                <div className={"relative"} key={route.href}>
                   <Link
                     href={route.href}
-                    className={cn(`text-foreground transition-colors`, {
-                      "hover:text-foreground/80": !isActive,
+                    className={cn(`group/link text-inherit transition-colors`, {
+                      // "hover:text-foreground/80": !isActive,
                     })}
                   >
                     {route.label}
+                    <div
+                      className={cn(
+                        "absolute bottom-px left-1/2 h-0.5 -translate-x-1/2 bg-primary duration-100 group-hover/link:w-full",
+                        {
+                          "w-full": isActive,
+                          "w-0": !isActive,
+                        },
+                      )}
+                    />
                   </Link>
                 </div>
               )
