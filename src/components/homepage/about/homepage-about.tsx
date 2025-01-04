@@ -15,7 +15,7 @@ export function HomepageAbout() {
       <div className="mx-auto max-w-6xl">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Bio Card */}
-          <Card className="relative overflow-hidden border-none bg-background dark:bg-primary/5">
+          <Card className="relative overflow-hidden bg-background dark:bg-primary/5">
             <CardContent className="p-8">
               <div className="mb-6 flex items-center gap-4">
                 <div className="relative h-20 w-20 overflow-hidden rounded-full">
