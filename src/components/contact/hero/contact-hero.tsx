@@ -63,7 +63,12 @@ function ContactItem({
 }) {
   const Icon = icon
   return (
-    <Link href={link} className="flex items-center space-x-3">
+    <Link
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center space-x-3"
+    >
       <Icon className="text-primary" />
       <Text as="span" variant={"muted"}>
         {text}

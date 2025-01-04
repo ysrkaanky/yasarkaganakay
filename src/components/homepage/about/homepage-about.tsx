@@ -66,6 +66,8 @@ export function HomepageAbout() {
                   return (
                     <Link
                       key={name}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={linkFormatter ? linkFormatter(link) : link}
                       className="rounded-full p-2 transition-colors hover:bg-muted"
                       aria-label={name}
