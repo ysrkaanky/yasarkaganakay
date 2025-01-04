@@ -3,7 +3,7 @@ import { Rubik, Roboto, Press_Start_2P } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { SiteFooter, SiteHeader } from "@/components/layout"
-
+import { Analytics } from "@vercel/analytics/react"
 const title = Rubik({
   variable: "--font-title",
   subsets: ["latin"],
@@ -47,6 +47,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
