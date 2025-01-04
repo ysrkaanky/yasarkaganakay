@@ -1,0 +1,7 @@
+export * from "./hero/hero"
+export * from "./projects/projects"
+export * from "./about/homepage-about"
+export * from "./services/services"
+export * from "./workflow/workflow"
+export * from "./cta/cta"
+export * from "./services/services"
