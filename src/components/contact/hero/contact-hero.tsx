@@ -26,7 +26,7 @@ export function ContactHero() {
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="flex flex-col justify-center gap-y-4">
             {socialLinks.map((socialLink) => {
-              const { icon, link, name, linkFormatter } = socialLink
+              const { icon, link, linkFormatter } = socialLink
               return (
                 <ContactItem
                   text={link.replace("https://", "").replace("http://", "")}
@@ -52,26 +52,17 @@ export function ContactHero() {
   )
 }
 
-function ContactItem({
-  icon,
-  text,
-  link,
-}: {
-  icon: IconType
-  text: string
-  link: string
-}) {
-  const Icon = icon
+function ContactItem(props: { icon: IconType; text: string; link: string }) {
   return (
     <Link
-      href={link}
+      href={props.link}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center space-x-3"
     >
-      <Icon className="text-primary" />
+      <props.icon className="text-primary" />
       <Text as="span" variant={"muted"}>
-        {text}
+        {props.text}
       </Text>
     </Link>
   )
