@@ -28,13 +28,13 @@ export function AboutJourney() {
                 motivated to learn something new every day.
               </Text>
               <div className="mt-4 flex flex-wrap gap-2">
-                <Badge variant="secondary" className="bg-card text-sm">
+                <Badge variant="secondary" className="text-sm">
                   Self-taught
                 </Badge>
-                <Badge variant="secondary" className="bg-card text-sm">
+                <Badge variant="secondary" className="text-sm">
                   Problem Solver
                 </Badge>
-                <Badge variant="secondary" className="bg-card text-sm">
+                <Badge variant="secondary" className="text-sm">
                   Continuous Learner
                 </Badge>
               </div>

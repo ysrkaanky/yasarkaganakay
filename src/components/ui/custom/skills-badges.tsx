@@ -11,14 +11,13 @@ export default function SkillsBadges(props: SkillsBadgesProps) {
   return (
     <div className={cn("mb-6 flex flex-wrap gap-2", props.className)}>
       {skills.map((skill) => {
-        const Icon = skill.icon
         return (
           <Badge
             key={skill.name}
             variant="secondary"
-            className="bg-card text-base font-light transition-colors duration-1000 animate-in fade-in zoom-in"
+            className="text-base font-light transition-colors"
           >
-            <Icon className="mr-2" size={"1em"} />
+            <skill.icon className="mr-2" size={"1em"} />
             {skill.name}
           </Badge>
         )

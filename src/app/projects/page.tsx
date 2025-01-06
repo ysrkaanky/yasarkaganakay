@@ -1,13 +1,19 @@
-import UnderDevelopment from "@/components/ui/custom/under-development"
-import React from "react"
+import {
+  ProjectCards,
+  ProjectsFilters,
+  ProjectsHero,
+  ProjectsCTA,
+} from "@/components/projects/all"
 
-export const metadata = {
-  title: "Projects - Kagan's Portfolio",
-  description:
-    "Browse Kagan's portfolio projects, showcasing expertise in ReactJS, NextJS, and more.",
-  keywords: "web development projects, Kagan, ReactJS, NextJS, portfolio",
-}
+// Sample project data - in a real app, this would come from a database or CMS
 
-export default function page() {
-  return <UnderDevelopment />
+export default function ProjectsPage() {
+  return (
+    <>
+      <ProjectsHero />
+      {/* <ProjectsFilters /> */}
+      <ProjectCards />
+      <ProjectsCTA />
+    </>
+  )
 }

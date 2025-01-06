@@ -11,7 +11,7 @@ interface ContainerPros {
 const Container = forwardRef<HTMLElement, ContainerPros>((props, ref) => {
   const Tag = (props.tag || "div") as React.ElementType
   return (
-    <div className="odd:bg-neutral-50 even:bg-neutral-200/50 dark:odd:bg-background dark:even:bg-neutral-500/5">
+    <div className="odd:bg-neutral-50 even:bg-neutral-200/50 dark:odd:bg-background dark:even:bg-neutral-700/15">
       <Tag
         ref={ref}
         className={cn(

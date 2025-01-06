@@ -1,6 +1,11 @@
-import UnderDevelopment from "@/components/ui/custom/under-development"
 import React from "react"
 
+import {
+  ServicesHero,
+  ServicesWorks,
+  ServicesTools,
+  ServicesCTA,
+} from "@/components/services"
 export const metadata = {
   title: "Services - Web Development by Kagan",
   description:
@@ -9,6 +14,13 @@ export const metadata = {
     "web development services, frontend solutions, API integration, Kagan",
 }
 
-export default function page() {
-  return <UnderDevelopment />
+export default function ServicesPage() {
+  return (
+    <>
+      <ServicesHero />
+      <ServicesWorks />
+      <ServicesTools />
+      <ServicesCTA />
+    </>
+  )
 }

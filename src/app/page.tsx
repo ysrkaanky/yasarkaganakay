@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <>
       <HomepageHero />
-      {/* <HomepageProjects /> */}
       <HomepageAbout />
+      <HomepageProjects />
       <HomepageServices />
       <HomepageWorkflow />
       <HomepageCTA />

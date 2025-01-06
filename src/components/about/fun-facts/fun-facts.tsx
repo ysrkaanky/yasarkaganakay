@@ -13,12 +13,11 @@ export function AboutFunFacts() {
       </Heading>
       <div className="grid gap-6 sm:grid-cols-2">
         {funFacts.map((fact) => {
-          const Icon = fact.icon
           return (
             <Card key={fact.title}>
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
-                  <Icon className="h-8 w-8 text-primary" />
+                  <fact.icon className="h-8 w-8 text-primary" />
                   <div>
                     <Heading as="h4" className="mb-1 text-xl font-medium">
                       {fact.title}

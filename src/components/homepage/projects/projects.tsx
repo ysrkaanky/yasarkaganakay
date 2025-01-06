@@ -7,6 +7,8 @@ import { Text } from "@/components/ui/custom/text"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ProjectItem } from "./project-item"
+import { projects } from "@/data/projects"
+import { ProjectCards } from "@/components/ui/custom/project-cards"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,15 +26,7 @@ export function HomepageProjects() {
         </Text>
       </div>
       <div className="xl: mx-auto flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap sm:justify-start">
-        {Array.from({ length: 3 }).map((_, i) => {
-          return (
-            <ProjectItem
-              className="sm:w-[calc(50%_-_.5rem)] xl:w-[calc(33.33%_-_.675rem)]"
-              key={i}
-              nth={i}
-            />
-          )
-        })}
+        <ProjectCards projects={projects.slice(0, 3)} />
       </div>
       <div className="flex justify-center">
         <Button variant="outline" asChild className="animate">
