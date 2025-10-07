@@ -4,9 +4,11 @@ import {
   DialogDescription,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog"
 import Image, { StaticImageData } from "next/image"
 import React from "react"
+import { X } from "lucide-react"
 
 interface ImageProps {
   image: StaticImageData
@@ -32,6 +34,12 @@ function DesktopImage({ image, title }: ImageProps) {
         </div>
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] max-w-[90vw] overflow-auto p-0">
+        {/* Custom Close Button */}
+        <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white opacity-70 transition-all hover:opacity-100 hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-white/50">
+          <X className="h-5 w-5" />
+          <span className="sr-only">Close</span>
+        </DialogClose>
+        
         {/* TO PREVENT RADIX UI ERROR */}
         <DialogTitle className="hidden">{title}</DialogTitle>
         <DialogDescription className="hidden">{title}</DialogDescription>
@@ -68,11 +76,17 @@ function MobileImage({ image, title }: ImageProps) {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-h-[90vh] max-w-[90vw] p-0">
+      <DialogContent className="max-h-[90vh] max-w-[90vw] p-0 bg-background/30 backdrop-blur">
+        {/* Custom Close Button */}
+        <DialogClose className="absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white opacity-70 transition-all hover:opacity-100 hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-white/50">
+          <X className="h-5 w-5" />
+          <span className="sr-only">Close</span>
+        </DialogClose>
+        
         {/* TO PREVENT RADIX UI ERROR */}
         <DialogTitle className="hidden">{title}</DialogTitle>
         <DialogDescription className="hidden">{title}</DialogDescription>
-        <div className="relative h-full w-auto">
+        <div className="relative h-full w-auto overflow-hidden">
           <Image
             src={image.src}
             alt={title + " Mobile Image"}

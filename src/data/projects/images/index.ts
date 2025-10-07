@@ -13,6 +13,9 @@ import sabirTeknikMobile from "./sabirteknik_mobile.png"
 
 import wordCounterDesktop from "./word_counter_desktop.png"
 import wordCounterMobile from "./word_counter_mobile.png"
+
+import iksorDesktop from "./iksor_desktop.webp"
+import iksorMobile from "./iksor_mobile.webp"
 interface ProjectImages {
   desktopImage: StaticImageData
   mobileImage: StaticImageData
@@ -38,6 +41,10 @@ export const projectImages = {
   neseli_disler: {
     desktopImage: neseliDislerDesktop,
     mobileImage: neseliDislerMobile,
+  },
+  iksor: {
+    desktopImage: iksorDesktop,
+    mobileImage: iksorMobile,
   },
 } satisfies {
   [key: string]: ProjectImages

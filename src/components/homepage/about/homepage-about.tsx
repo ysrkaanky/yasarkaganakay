@@ -43,15 +43,14 @@ export function HomepageAbout() {
                   user-friendly interfaces and robust backend systems.
                 </Text>
                 <Text className="">
-                  Currently, I&apos;m focused on building accessible,
-                  human-centered developments and implementations at{" "}
+                  Currently, I&apos;m focused on building amazing stores, at{" "}
                   <Link
-                    href={"https://pedalcommander.com"}
+                    href={"https://www.jollycommerce.io/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary"
                   >
-                    Pedal Commander
+                    Jolly Commerce
                   </Link>
                   . I enjoy turning complex problems into simple, beautiful, and
                   intuitive solutions.
@@ -126,16 +125,16 @@ export function HomepageAbout() {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    Optimized website performance, achieving 95+ Lighthouse
+                    Optimized website performance, achieving 90+ Lighthouse
                     scores
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    Designed and developed a portfolio site used by client
+                    Developed custom Shopify apps to enchance store functionality, including Shopify Flow integrations and metaobject management
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    Created a website with a dashboard, for a dental clinic
+                    Collaborated with cross-functional teams to deliver seamless user experiences
                   </li>
                 </ul>
               </CardContent>
