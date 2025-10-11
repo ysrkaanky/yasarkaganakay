@@ -19,6 +19,10 @@ import { cn } from "@/lib/utils"
 export function SiteHeader() {
   const pathname = usePathname()
 
+  if (pathname === "/cikolota-magazasi-teklif") {
+    return null
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Container className="flex items-center py-4" padding="none">

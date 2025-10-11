@@ -2,6 +2,7 @@
 
 import Mountains from "./mountains"
 import { Text } from "@/components/ui/custom/text"
+import { usePathname } from "next/navigation"
 import { useEffect, useState, useRef } from "react"
 
 const HiThereTexts = [
@@ -81,6 +82,11 @@ const Typewriter = ({ texts }: { texts: string[] }) => {
 }
 
 export function SiteFooter() {
+  const pathname = usePathname()
+  if (pathname === "/cikolota-magazasi-teklif") {
+    return null
+  }
+
   return (
     <footer className="relative border-t bg-blue-950">
       <div className="pointer-events-none absolute inset-0 bottom-0 h-auto w-full overflow-hidden">
