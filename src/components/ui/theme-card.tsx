@@ -24,9 +24,6 @@ interface ThemeCardProps {
 }
 
 export function ThemeCard({ theme }: ThemeCardProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeView, setActiveView] = useState<"desktop" | "mobile">("desktop")
-
   const openDesktopView = (e: React.MouseEvent) => {
     e.stopPropagation()
     window.open(theme.desktopImage, "_blank")
@@ -40,8 +37,7 @@ export function ThemeCard({ theme }: ThemeCardProps) {
   return (
     <>
       <Card
-        className="group cursor-pointer overflow-hidden transition-all hover:shadow-lg"
-        onClick={() => setIsOpen(true)}
+        className="group overflow-hidden transition-all hover:shadow-lg"
       >
         <div className="relative aspect-[16/9] overflow-hidden bg-muted">
           <Image
