@@ -15,11 +15,12 @@ import { HiOutlineMenu } from "react-icons/hi"
 import Logo from "@/components/ui/custom/logo"
 import { ThemeToggler } from "@/components/ui/custom/theme-toggler"
 import { cn } from "@/lib/utils"
+import { shouldHideLayout } from "@/lib/layout-utils"
 
 export function SiteHeader() {
   const pathname = usePathname()
 
-  if (pathname === "/cikolota-magazasi-teklif") {
+  if (shouldHideLayout(pathname)) {
     return null
   }
 

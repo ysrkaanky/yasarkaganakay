@@ -1,4 +1,5 @@
 import { Check } from "lucide-react"
+import { Metadata } from "next"
 
 const packages = [
   {
@@ -92,7 +93,7 @@ const optionalFeatures = [
   },
 ]
 
-export const metadata = {
+export const metadata:Metadata = {
   robots: {
     index: false,
     follow: false,

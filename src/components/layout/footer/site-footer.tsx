@@ -2,6 +2,7 @@
 
 import Mountains from "./mountains"
 import { Text } from "@/components/ui/custom/text"
+import { shouldHideLayout } from "@/lib/layout-utils"
 import { usePathname } from "next/navigation"
 import { useEffect, useState, useRef } from "react"
 
@@ -83,7 +84,7 @@ const Typewriter = ({ texts }: { texts: string[] }) => {
 
 export function SiteFooter() {
   const pathname = usePathname()
-  if (pathname === "/cikolota-magazasi-teklif") {
+  if (shouldHideLayout(pathname)) {
     return null
   }
 
