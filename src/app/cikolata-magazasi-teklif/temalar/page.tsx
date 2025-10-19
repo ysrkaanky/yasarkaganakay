@@ -4,7 +4,7 @@ const themes = [
   {
     id: 1,
     name: "Caffeine",
-    price: 180,
+    price: 360,
     image: "/chocalate-themes/caffeine.png",
     desktopImage: "/chocalate-themes/caffeine.png",
     mobileImage: "/chocalate-themes/caffeine_mobile.png",
