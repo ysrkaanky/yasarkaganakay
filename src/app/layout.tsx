@@ -4,7 +4,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { SiteFooter, SiteHeader } from "@/components/layout"
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const title = Rubik({
   variable: "--font-title",
@@ -50,7 +49,6 @@ export default function RootLayout({
           <SiteFooter />
         </ThemeProvider>
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )
